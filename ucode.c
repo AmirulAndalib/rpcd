@@ -1021,6 +1021,9 @@ rpc_ucode_script_execute(struct ubus_context *ctx, const char *path, uc_program_
 	case ERROR_RUNTIME:
 		fprintf(stderr, "Runtime error while executing ucode script %s\n", path);
 		break;
+
+	default:
+		break;
 	}
 
 	uc_vm_free(&script->vm);
